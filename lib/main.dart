@@ -11,39 +11,38 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Aplikasi Mahasiswa',
+      title: 'Apk siwakk',
       darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green,
-        brightness: Brightness.dark),
+        brightness: Brightness.light,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white,
+        brightness: Brightness.light),
       ),
-      themeMode: ThemeMode.dark,
-      home: HomePage2(),
+      themeMode: ThemeMode.light,
+      home: ProfilePage(),
     );
   }
 }
 
-class HomePage2 extends StatelessWidget {
-  const HomePage2({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey,
-        leading: const Icon(Icons.access_alarms),
-        title: const Text('Hello World Im Back To learned Flutter'),
+        title: const Text('Halaman Profile'),
+        backgroundColor: Colors.blue,
         centerTitle: true,
+        leading: Icon(Icons.person),
         actions: [
           Icon(Icons.access_time),
-          Icon(Icons.ac_unit),
-          Icon(Icons.access_alarms),
         ],
       ),
       body: const Center(
         child: Text('Muhamad Anggara',
-        style: TextStyle(fontSize: 30,
-        color: Colors.white),
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 20,
+        fontWeight: FontWeight.bold),
         ),
       ),
     );
